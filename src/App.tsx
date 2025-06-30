@@ -4,14 +4,16 @@ import Hero from './components/Hero';
 import NoticeBoard from './components/NoticeBoard';
 import RoutesList from './components/RoutesList';
 import TripsList from './components/TripsList';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import { apiService } from './services/api';
-import { Organization, Route, Trip } from './types';
+import { Organization, Route, Trip, Notice } from './types';
 
 function App() {
   const [organization, setOrganization] = useState<Organization | null>(null);
   const [routes, setRoutes] = useState<Route[]>([]);
   const [trips, setTrips] = useState<Trip[]>([]);
+  const [notices, setNotices] = useState<Notice[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeSection, setActiveSection] = useState('notice');
@@ -22,15 +24,17 @@ function App() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const [orgData, routesData, tripsData] = await Promise.all([
+        const [orgData, routesData, tripsData, noticesData] = await Promise.all([
           apiService.getOrganization(),
           apiService.getRoutes(),
-          apiService.getTrips()
+          apiService.getTrips(),
+          apiService.getNotices()
         ]);
 
         setOrganization(orgData);
         setRoutes(routesData);
         setTrips(tripsData);
+        setNotices(noticesData);
         setError(null);
       } catch (err) {
         console.error('Error fetching data:', err);
@@ -110,7 +114,7 @@ function App() {
       
       <Hero organizationName={organization.name} />
       
-      <NoticeBoard />
+      <NoticeBoard notices={notices} />
       
       <RoutesList 
         routes={routes}
@@ -123,6 +127,8 @@ function App() {
         selectedRouteId={selectedRouteId}
         selectedRouteName={selectedRouteName}
       />
+      
+      <ContactForm orgCode={organization.org_code} />
       
       <Footer 
         organizationName={organization.name}

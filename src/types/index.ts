@@ -50,6 +50,26 @@ export interface Trip {
   deleted_at?: string;
 }
 
+export interface Notice {
+  id: number;
+  org_code: number;
+  title: string;
+  details: string;
+  status: 'active' | 'inactive';
+  created_by: number;
+  updated_by?: number;
+  deleted_by?: number;
+  created_at: string;
+  updated_at?: string;
+}
+
+export interface ContactRequest {
+  org_code: string;
+  name: string;
+  email: string;
+  message: string;
+}
+
 export interface ApiResponse<T> {
   status: string;
   message: string;

@@ -13,7 +13,7 @@ const RoutesList: React.FC<RoutesListProps> = ({ routes, onRouteSelect, selected
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            উপলব্ধ <span className="bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">রুটসমূহ</span>
+            <span className="bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent">রুটসমূহ</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             আমাদের নেটওয়ার্কের সকল রুট এবং গন্তব্যের তালিকা দেখুন
@@ -101,7 +101,7 @@ const RoutesList: React.FC<RoutesListProps> = ({ routes, onRouteSelect, selected
               <Route className="h-12 w-12 text-gray-400" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">কোনো রুট পাওয়া যায়নি</h3>
-            <p className="text-gray-600">এই মুহূর্তে কোনো রুট উপলব্ধ নেই।</p>
+            <p className="text-gray-600">এই মুহূর্তে কোনো রুট নেই।</p>
           </div>
         )}
       </div>

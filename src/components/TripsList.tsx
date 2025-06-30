@@ -226,7 +226,7 @@ const TripsList: React.FC<TripsListProps> = ({ trips, selectedRouteId, selectedR
               <Car className="h-12 w-12 text-gray-400" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">কোনো ট্রিপ পাওয়া যায়নি</h3>
-            <p className="text-gray-600">নির্বাচিত ফিল্টার অনুযায়ী কোনো ট্রিপ উপলব্ধ নেই।</p>
+            <p className="text-gray-600">নির্বাচিত ফিল্টার অনুযায়ী কোনো ট্রিপ নেই।</p>
           </div>
         )}
       </div>

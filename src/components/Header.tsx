@@ -14,10 +14,12 @@ const Header: React.FC<HeaderProps> = ({ organizationName, onNavigate, activeSec
     { id: 'notice', label: 'নোটিশ বোর্ড' },
     { id: 'routes', label: 'রুট তালিকা' },
     { id: 'trips', label: 'ট্রিপ তথ্য' },
+    { id: 'contact', label: 'যোগাযোগ' },
   ];
 
   const handleLogin = () => {
-    window.location.href = 'http://localhost:8080/login';
+    const loginUrl = import.meta.env.VITE_LOGIN_URL || 'http://localhost:8080/login';
+    window.location.href = loginUrl;
   };
 
   return (
