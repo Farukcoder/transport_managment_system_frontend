@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ organizationName }) => {
             </span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl text-blue-100 font-normal">
-              পরিবহন তথ্য সিস্টেম
+              পরিবহন ব্যবস্থাপনা
             </span>
           </h1>
           

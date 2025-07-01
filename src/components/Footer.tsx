@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ organizationName, organizationAddress }
                   <h3 className="text-xl font-bold bg-gradient-to-r from-blue-300 to-teal-300 bg-clip-text text-transparent">
                     {organizationName}
                   </h3>
-                  <p className="text-sm text-blue-200">পরিবহন তথ্য সিস্টেম</p>
+                  <p className="text-sm text-blue-200">পরিবহন ব্যবস্থাপনা</p>
                 </div>
               </div>
               <p className="text-blue-100 mb-6 leading-relaxed">

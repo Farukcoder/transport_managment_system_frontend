@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ organizationName, onNavigate, activeSec
               <h1 className="text-lg font-bold bg-gradient-to-r from-blue-300 to-teal-300 bg-clip-text text-transparent">
                 {organizationName}
               </h1>
-              <p className="text-xs text-blue-200">পরিবহন তথ্য সিস্টেম</p>
+              <p className="text-xs text-blue-200">পরিবহন ব্যবস্থাপনা</p>
             </div>
           </div>
 
